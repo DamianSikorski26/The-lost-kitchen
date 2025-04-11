@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+body{
+    background-color: $the_background_color;
+}
+
+a{
+    text-decoration: none;
+    font-family: $font-raleway;
+    color: black;
+}
+.Garamond{
+    font-family: $font-garamond;
+}
+.white-texte{
+    color:white;
+}
+
+

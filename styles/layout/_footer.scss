@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+
+footer{
+    width:calc(100% - 20px);
+    max-width:1400px ;
+    margin:20px auto;
+    border-top: 1px solid rgb(212, 212, 212);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    @include min960px{
+        grid-template-columns: repeat(3,1fr);
+    }
+    img{
+        width: 150px;
+        justify-self: center;
+        align-self: center;
+        
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        gap: 5px;
+        margin: 20px 0;
+        border-top: 1px solid rgb(212, 212, 212);
+        padding: 20px 0;
+        @include min960px{
+            border-top: none;
+        }
+        h1{
+            font-family: $font-raleway;
+            font-weight: lighter;
+            font-size: 16px;
+            color:rgb(170, 170, 170);
+        }
+        a{
+            display: inline-block;
+            color: rgb(170, 170, 170);
+            &:hover{
+                color: black;
+                text-decoration: underline;
+            }
+        }
+    }
+    .subscribe{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+        span{
+            font-style: italic;
+        }
+        form{
+            border-bottom: 1px solid black;
+            font-family: $font-raleway;
+        }
+        input{
+            border: none;
+            background-color: $the_background_color;
+            font-size: 18px;
+        }
+        input[type="email"]{
+            width: calc(100% - 155px);
+            outline: none;
+            
+        }
+        input[type="submit"]{
+            width: 150px;
+            text-transform: uppercase;
+            
+            cursor: pointer;
+        }
+    }
+    i{
+        margin-right: 10px;
+        &:hover{
+            color: rgb(158, 158, 158);
+            transition: .3s all linear;
+        }
+    }
+    .small-footer-container{
+        border-top: 1px solid rgb(212, 212, 212);
+        padding: 20px 0;
+        font-size: 14px;
+        font-family: $font-raleway;
+        @include min960px{
+            border-top: none;
+        }
+        a{
+            text-decoration: underline;
+            font-weight:bold;
+        }
+
+    }
+}
